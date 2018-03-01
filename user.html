@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>G Infrastructure</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="blue" data-image="assets/img/ibm_nav.jpg">
+
+    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    IT Infrastructure
+                    </a>
+                </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="index.html">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="user.html">
+                        <i class="pe-7s-user"></i>
+                        <p>Members</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="telephony.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Telephony Inventory</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="ipaddr.html">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>IP Address Inventory</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="others.html">
+                        <i class="pe-7s-science"></i>
+                        <p>Useful Links</p>
+                    </a>
+                </li>
+                
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+            <nav class="navbar navbar-default navbar-fixed">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">Members</a>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <img src="assets/img/ibm_stripblack.png" height="25px" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Infra Squad</h4>
+                            </div>
+                            <div class="content">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>First Name</label>
+                                                <input type="text" id="firstname" class="form-control" disabled placeholder="First Name" value="Dwight">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Last Name</label>
+                                                <input type="text" id="lastname" class="form-control" disabled placeholder="Last Name" value="Leynes">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Email</label>
+                                                    <input type="text" id="email" class="form-control" disabled placeholder="Email" value="leynesds@sg.ibm.com">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Office No</label>
+                                                    <input type="number" id="ofcno" class="form-control" disabled placeholder="Office No" value="7047">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Mobile No</label>
+                                                    <input type="number" id="mobileno" class="form-control" disabled placeholder="Mobile No">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Address</label>
+                                                <input type="text" id="address" class="form-control" disabled placeholder="Home Address" value="Pasir Ris">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <input type="text" id="city" class="form-control" disabled placeholder="City" value="Singapore">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Country</label>
+                                                <input type="text" id="country" class="form-control" disabled placeholder="Country" value="Singapore">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Postal Code</label>
+                                                <input type="number" id="postalcode" class="form-control" disabled placeholder="ZIP Code">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Job Scope</label>
+                                                <textarea rows="5" id="jobscope" class="form-control" disabled placeholder="Here can be your description" value="">Job Description</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                    <div class="clearfix"></div> -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-user">
+                            <div class="image">
+                                <img src="assets/img/ITInfrabanner.jpg" alt="..."/>
+                            </div>
+                            <div class="content">
+                                <div class="author">
+                                     <a href="#">
+                                    <img class="avatar border-gray" id="imgface" src="assets/img/faces/dwight.png" alt="..."/>
+
+                                      <h4 class="title" id="nametitle">Dwight Leynes<br />
+                                         <!-- <small>leynesds</small> -->
+                                      </h4>
+                                    </a>
+                                </div>
+                                <br>
+                                <p class="description text-left"> TEAM MEMBERS: <br></p>
+                                <!-- <p class="description text-left"> Hendrick Chua<br></p>
+                                <p class="description text-left"> Jessper Baylon<br></p>
+                                <p class="description text-left"> Sadeyah Madali<br></p> -->
+                                <ul>
+                                    <li>
+                                        <a href="#" id="displayDwight">
+                                            Dwight Leynes
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="displayHendrick">
+                                            Hendrick Chua
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="displayJessper">
+                                            Jessper Baylon
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="displaySadeyah">
+                                            Sadeyah Matali
+                                        </a>
+                                    </li>
+                                        
+                                </ul>
+                                                   
+                            </div>
+                            <hr>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Dwight Leynes
+                </p>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Charts Plugin -->
+	<script src="assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+	<script src="assets/js/demo.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            
+            $("#displayDwight").click(function(){
+                $("#firstname").val("Dwight");
+                $("#lastname").val("Leynes");
+                $("#email").val("leynesds@sg.ibm.com");
+                $("#ofcno").val("7047");
+                $("#mobileno").val("");
+                $("#address").val("Pasir Ris");
+                $("#city").val("Singapore");
+                $("#country").val("Singapore");
+                $("#postalcode").val("1434");
+                $("#jobscope").val("Testing Dwight");
+                $("#nametitle").text("Dwight Leynes");
+                $("#imgface").attr("src","assets/img/faces/dwight.png");
+            });
+
+            $("#displayHendrick").click(function(){
+                $("#firstname").val("Hendrick");
+                $("#lastname").val("Chua");
+                $("#email").val("chuakch@sg.ibm.com");
+                $("#ofcno").val("7186");
+                $("#mobileno").val("");
+                $("#address").val("Tampines");
+                $("#city").val("Singapore");
+                $("#country").val("Singapore");
+                $("#postalcode").val("1234");
+                $("#jobscope").val("Testing");
+                $("#nametitle").text("Hendrick Chua");
+                $("#imgface").attr("src","assets/img/faces/hendrick.png");
+            });
+
+            $("#displayJessper").click(function(){
+                $("#firstname").val("Jessper");
+                $("#lastname").val("Baylon");
+                $("#email").val("baylonja@sg.ibm.com");
+                $("#ofcno").val("7010");
+                $("#mobileno").val("");
+                $("#address").val("Tampines");
+                $("#city").val("Singapore");
+                $("#country").val("Singapore");
+                $("#postalcode").val("4567");
+                $("#jobscope").val("Testing Baylon");
+                $("#nametitle").text("Jessper Baylon");
+                $("#imgface").attr("src","assets/img/faces/jessper.png");
+            });
+
+            $("#displaySadeyah").click(function(){
+                $("#firstname").val("Sadeyah");
+                $("#lastname").val("Matali");
+                $("#email").val("sadeyah@sg.ibm.com");
+                $("#ofcno").val("7540");
+                $("#mobileno").val("");
+                $("#address").val("Tampines");
+                $("#city").val("Singapore");
+                $("#country").val("Singapore");
+                $("#postalcode").val("6789");
+                $("#jobscope").val("Testing Sadeyah");
+                $("#nametitle").text("Sadeyah Matali");
+                $("#imgface").attr("src","assets/img/faces/sadeyah.png");
+            });
+
+        });
+        
+	</script>
+
+</html>

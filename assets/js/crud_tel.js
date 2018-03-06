@@ -112,28 +112,8 @@ $.getJSON(url, function (json) {
     // Set the variables from the results array
    
     // CREATE DYNAMIC TABLE.
-    var table = document.createElement("table");
+    var table = document.getElementById("dataTable")
 
-    var header = table.createTHead();
-		var row = header.insertRow(0);     
-		var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);
-    var cell6 = row.insertCell(5);
-    var cell7 = row.insertCell(6);
-    var cell8 = row.insertCell(7);
-	
-		cell1.innerHTML = "<b>Requestor</b>";
-    cell2.innerHTML = "<b>Display Name</b>";
-    cell3.innerHTML = "<b>DID</b>";
-    cell4.innerHTML = "<b>Extn</b>";
-    cell5.innerHTML = "<b>Mac Address</b>";
-    cell6.innerHTML = "<b>Phone Model</b>";
-    cell7.innerHTML = "<b>Serial Number</b>";
-    cell8.innerHTML = "<b>Voicemail</b>";
-    
     // ADD JSON DATA TO THE TABLE AS ROWS.
     for (var i = 0; i < json.records.length; i++) {
         
@@ -156,14 +136,7 @@ $.getJSON(url, function (json) {
         tabCell.innerHTML = json.records[i].Voicemail;
         
     }
-    //console.log(json)
-
-    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-    var divContainer = document.getElementById("showData");
-    //divContainer.innerHTML = "";
-    divContainer.appendChild(table);
-		// document.getElementById("loader").style.visibility = "hidden";
-		//$("#re").css("visibility","visible");
+    
     });
 
 

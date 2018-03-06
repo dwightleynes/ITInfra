@@ -1,5 +1,6 @@
-type = ['','info','success','warning','danger'];
+var script_url = "https://script.google.com/macros/s/AKfycbz5AExL5MREGGiq8yn2PDREkVnTajnQRGD6YkZEeGu5m5KZtQQ/exec";
 
+type = ['','info','success','warning','danger'];
 
 demo = {
     initPickColor: function(){
@@ -36,6 +37,7 @@ demo = {
     }, 17),
 
     initDocChartist: function(){
+
         var dataSales = {
           labels: ['9:00AM', '12:00AM', '3:00PM', '6:00PM', '9:00PM', '12:00PM', '3:00AM', '6:00AM'],
           series: [
@@ -130,54 +132,15 @@ demo = {
 
     initChartist: function(){
 
-        var dataSales = {
-          labels: ['Done (Issue WorkFlow)', 'Cancelled', 'InProgress', 'New', 'Grooming', 'Done (User Story WF)', 'InProgress'],
-          series: [[32, 0, 0, 0, 0, 0, 0], 
-                  [0, 21, 0, 0, 0, 0, 0],
-                  [0, 0, 6, 0, 0, 0, 0],
-                  [0, 0, 0, 5, 0, 0, 0],
-                  [0, 0, 0, 0, 2, 0, 0],
-                  [0, 0, 0, 0, 0, 17, 0],
-                  [0, 0, 0, 0, 0, 0, 12]
-                ]
-            
-            
-          
-        };
-
-        var optionsSales = {
-          lineSmooth: false,
-          low: 0,
-          high: 50,
-          showArea: true,
-          height: "245px",
-          axisX: {
-            showGrid: false,
-          },
-          lineSmooth: Chartist.Interpolation.simple({
-            divisor: 3
-          }),
-          showLine: false,
-          showPoint: false,
-        };
-
-        var responsiveSales = [
-          ['screen and (max-width: 640px)', {
-            axisX: {
-              labelInterpolationFnc: function (value) {
-                return value[0];
-              }
-            }
-          }]
-        ];
-
-        Chartist.Line('#chartHours', dataSales, optionsSales, responsiveSales);
-
-
+      var url = script_url+"?action=read";
+      
+      $.getJSON(url, function (json) {
+          console.log(json)
+      
         var data = {
-          labels: ['Done (IWF)', 'Cancelled', 'InProgress (IWF)', 'New', 'Grooming', 'Done (USWF)', 'InProgress (USWF)'],
+          labels: [json.records[0].BarLabel, json.records[1].BarLabel, json.records[2].BarLabel, json.records[3].BarLabel, json.records[4].BarLabel, json.records[5].BarLabel, json.records[6].BarLabel],
           series: [
-             [31], [21], [6], [5], [2], [17], [2]
+             [json.records[0].BarData], [json.records[1].BarData], [json.records[2].BarData], [json.records[3].BarData], [json.records[4].BarData], [json.records[5].BarData], [json.records[6].BarData]
           ]
         
         };
@@ -193,7 +156,7 @@ demo = {
 
         var responsiveOptions = [
           ['screen and (max-width: 640px)', {
-            seriesBarDistance: 5,
+            seriesBarDistance: 40,
             axisX: {
               labelInterpolationFnc: function (value) {
                 return value[0];
@@ -206,7 +169,7 @@ demo = {
 
         var dataPreferences = {
             series: [
-                [25, 30, 20, 25]
+                [50, 30, 20]
             ]
         };
 
@@ -224,10 +187,12 @@ demo = {
         Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
 
         Chartist.Pie('#chartPreferences', {
-          labels: ['55%','15%','30%'],
-          series: [55, 15, 30]
+          labels: [json.records[0].PieLabel + " (" + json.records[0].PieData + ")",json.records[1].PieLabel + " (" + json.records[1].PieData + ")",json.records[2].PieLabel + " (" + json.records[2].PieData + ")"],
+          series: [json.records[0].PieData, json.records[1].PieData, json.records[2].PieData]
         });
+      });
     },
+
 
     initGoogleMaps: function(){
         var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
@@ -268,3 +233,4 @@ demo = {
 
 
 }
+

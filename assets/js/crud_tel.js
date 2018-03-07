@@ -119,8 +119,6 @@ $.getJSON(url, function (json) {
         
         tr = table.insertRow(-1);
         var tabCell = tr.insertCell(-1);
-        tabCell.innerHTML = json.records[i].Requestor;
-        tabCell = tr.insertCell(-1);
         tabCell.innerHTML = json.records[i].Display_Name;
         tabCell = tr.insertCell(-1);
         tabCell.innerHTML = json.records[i].DID;
@@ -132,8 +130,6 @@ $.getJSON(url, function (json) {
         tabCell.innerHTML = json.records[i].Phone_Model;
         tabCell = tr.insertCell(-1);
         tabCell.innerHTML = json.records[i].Serial_Number;
-        tabCell = tr.insertCell(-1);
-        tabCell.innerHTML = json.records[i].Voicemail;
         
     }
     
